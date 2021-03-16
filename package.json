@@ -1,0 +1,23 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "Client": "cd client && npm run start",
+    "server": "nodemon index --ignore client/",
+    "client-install": "cd client && npm install",
+    "server-install": "npm install",
+    "install-all": "conccurently \"npm run client-install\" \"npm run server-install\"",
+    "dev": "conccurently \"npm run client\" \"npm run server\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.8"
+  }
+}
